@@ -42,3 +42,7 @@ Terminali açın ve projenizin ana klasöründen `frontend` dizinine geçin:
 ```bash
 cd etkinlik-platformu/frontend
 ```
+Gerekli tüm bağımlılıkları (React, Firebase, vb.) yükleyin:
+npm install
+Geliştirme sunucusunu başlatın:
+npm run dev
