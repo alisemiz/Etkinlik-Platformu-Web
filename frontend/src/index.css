@@ -1,0 +1,280 @@
+/* --- Google Fonts (Exo 2) --- */
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@700&display=swap");
+
+/* --- TEMEL AYARLAR VE KOYU TEMA --- */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-color: #111827; /* Tailwind bg-gray-900 */
+  color: #f9fafb; /* Tailwind text-white/gray-50 */
+}
+
+/* --- ANA YAPI --- */
+.app-container {
+  min-height: 100vh;
+  padding: 2.5rem; /* p-10 */
+  display: flex;
+  gap: 2.5rem; /* gap-10 */
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+  }
+}
+
+.sol-panel {
+  flex: 1;
+  max-width: 42rem;
+}
+
+.sag-panel {
+  flex: 2;
+  border-left: 1px solid #374151;
+  padding-left: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .sag-panel {
+    border-left: none;
+    padding-left: 0;
+  }
+}
+
+/* --- BAŞLIKLAR VE DİĞERLERİ (DEĞİŞTİ) --- */
+h1 {
+  font-family: "Exo 2", sans-serif; /* YENİ: Başlık fontu */
+  font-size: 2.25rem; /* text-4xl gibi */
+  font-weight: bold;
+  margin-bottom: 1rem;
+  letter-spacing: -0.025em; /* Hafif karakter aralığı */
+  color: #93c5fd; /* Başlık rengi */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* YENİ: Hafif gölge */
+}
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #d1d5db; /* text-gray-300 */
+}
+h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+hr {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-color: #374151;
+}
+
+/* --- FORMLAR VE INPUTLAR --- */
+.form-container {
+  background-color: #1f2937;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.3); /* YENİ: Daha belirgin gölge */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-grup {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #9ca3af;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: #374151;
+  border-radius: 0.375rem;
+  border: 1px solid #4b5563;
+  color: white;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* YENİ: Focus animasyonu */
+}
+.form-input:focus {
+  /* YENİ: Focus stili */
+  outline: none;
+  border-color: #3b82f6; /* focus:border-blue-500 */
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5); /* Hafif mavi parlama */
+}
+
+.form-input[type="datetime-local"] {
+  color-scheme: dark;
+}
+
+/* --- BUTONLAR (DEĞİŞTİ) --- */
+.buton-grup {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 0.5rem;
+}
+
+.buton {
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease-out,
+    box-shadow 0.2s ease-in-out; /* YENİ: Animasyon geçişleri */
+  display: inline-flex; /* İkonlar için */
+  align-items: center; /* İkonları ortala */
+  gap: 0.5rem; /* İkon ile yazı arası boşluk */
+}
+
+.buton:hover {
+  /* YENİ: Hover animasyonu */
+  transform: translateY(-2px); /* Hafif yukarı kayar */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.buton:active {
+  /* YENİ: Click animasyonu */
+  transform: translateY(0); /* Geri aşağı iner */
+  box-shadow: none;
+}
+
+.buton-primary {
+  background-color: #2563eb;
+  color: white;
+}
+.buton-primary:hover {
+  background-color: #1d4ed8;
+}
+
+.buton-secondary {
+  background-color: #4b5563;
+  color: white;
+}
+.buton-secondary:hover {
+  background-color: #374151;
+}
+
+.buton-success {
+  background-color: #16a34a;
+  color: white;
+}
+.buton-success:hover {
+  background-color: #15803d;
+}
+
+.buton-danger {
+  background-color: #dc2626;
+  color: white;
+}
+.buton-danger:hover {
+  background-color: #b91c1c;
+}
+
+.buton-warning {
+  background-color: #ca8a04;
+  color: white;
+}
+.buton-warning:hover {
+  background-color: #a16207;
+}
+
+/* --- ETKİNLİK KARTLARI (DEĞİŞTİ) --- */
+.etkinlik-listesi {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.etkinlik-karti {
+  background-color: #1f2937;
+  padding: 1.25rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.3); /* YENİ: Daha belirgin gölge */
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* YENİ: Hover animasyonu */
+}
+.etkinlik-karti:hover {
+  /* YENİ: Hover animasyonu */
+  transform: translateY(-4px); /* Hafif yukarı kayar */
+  box-shadow: 0 12px 24px -6px rgba(0, 0, 0, 0.4);
+}
+
+.etkinlik-karti h3 {
+  color: #93c5fd;
+  margin-bottom: 0.5rem; /* Başlık ile açıklama arası boşluk */
+}
+.etkinlik-karti p {
+  color: #d1d5db;
+  margin-top: 0.5rem;
+}
+
+.etkinlik-karti-meta {
+  display: flex;
+  flex-wrap: wrap; /* Küçük ekranlarda yan yana sığmazsa alta geçsin */
+  gap: 1rem;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: #9ca3af;
+}
+
+.katilimcilar-baslik {
+  display: block;
+  margin-top: 1rem;
+  color: #9ca3af;
+  font-weight: bold;
+}
+.katilimcilar-listesi {
+  list-style-type: disc;
+  list-style-position: inside;
+  margin-top: 0.5rem;
+  color: #d1d5db;
+}
+.katilimci-yok {
+  font-style: italic;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.buton-alani {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* --- MESAJ ALANI --- */
+.mesaj-alani {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #fde047;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* YENİ: Mesajlara gölge */
+}
+
+/* --- YENİ: Boş Durum Mesajı Stili --- */
+.empty-state-message {
+  color: #6b7280;
+  font-size: 1.1rem;
+  font-style: italic;
+  padding: 1rem;
+  border: 1px dashed #4b5563;
+  border-radius: 0.5rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* --- YENİ: İKON STİLLERİ (Varsayılan olarak görünmez, SVG ekleyince görünecek) --- */
+.icon {
+  width: 1em; /* Yazının font büyüklüğü kadar olsun */
+  height: 1em;
+  fill: currentColor; /* Yazının rengini alsın */
+  vertical-align: middle; /* Yazı ile aynı hizada dursun */
+}
