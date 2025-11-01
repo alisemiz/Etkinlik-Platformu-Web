@@ -43,6 +43,6 @@ Terminali açın ve projenizin ana klasöründen `frontend` dizinine geçin:
 cd etkinlik-platformu/frontend
 ```
 Gerekli tüm bağımlılıkları (React, Firebase, vb.) yükleyin:
-npm install
+                    npm install
 Geliştirme sunucusunu başlatın:
-npm run dev
+                      npm run dev
